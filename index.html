@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f4ee" />
+    <title>Maths Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="card" aria-live="polite">
+        <div class="brand-row">
+          <div class="brand-mark" aria-hidden="true"><span>+</span><span>−</span></div>
+          <p class="eyebrow">Daily practice</p>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+          <div class="intro">
+            <h1>Maths <em>Quiz</em></h1>
+            <p>10 quick questions.<br />How many can you get right?</p>
+          </div>
+
+          <div class="progress-wrap" aria-label="Quiz progress">
+            <div class="progress-meta">
+              <span id="question-label">Question 1 of 10</span>
+              <span id="score-label">0 correct</span>
+            </div>
+            <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+          </div>
+
+          <div class="question-area">
+            <p class="question-kicker">Solve this one</p>
+            <div id="question" class="question">4 + 3 =</div>
+            <form id="answer-form" class="answer-form">
+              <label class="sr-only" for="answer">Your answer</label>
+              <input id="answer" name="answer" type="number" inputmode="numeric" autocomplete="off" required />
+              <button type="submit" class="primary-button">Check answer <span aria-hidden="true">→</span></button>
+            </form>
+            <p id="feedback" class="feedback" role="status"></p>
+          </div>
+        </div>
+
+        <div id="end-screen" class="screen end-screen hidden">
+          <div class="trophy" aria-hidden="true">✦</div>
+          <p class="eyebrow accent">Round complete</p>
+          <h2>Well <em>done!</em></h2>
+          <p class="result-copy">You got</p>
+          <div class="final-score"><span id="final-score">0</span><small>/ 10</small></div>
+          <p id="result-message" class="result-message">Every round makes you sharper.</p>
+          <button id="restart-button" class="primary-button" type="button">Try again <span aria-hidden="true">↗</span></button>
+        </div>
+
+        <footer><span>ADDITION</span><span>SUBTRACTION</span><span>10 QUESTIONS</span></footer>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
